@@ -1,13 +1,14 @@
 <?php
 
 
-if ($_POST["id"] && $_POST["name"] && $_POST["lastname"]){
+if ( $_POST["id"] &&
+     $_POST["name"] &&
+     $_POST["lastname"]){
+
   $servername = "localhost";
   $username = "root";
   $password = "taichow";
   $dbname = "prova1";
-
-
 
   // Connect - apertura connession con il server
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,17 +23,14 @@ if ($_POST["id"] && $_POST["name"] && $_POST["lastname"]){
   $name = $_POST["name"];
   $lastname = $_POST["lastname"];
 
-
   $sql = "
           UPDATE paganti
           SET name = '$name', lastname = '$lastname'
           WHERE id = $id
         ";
-        
+
   $result = $conn->query($sql);
-
   $conn->close();
-
 
 }
  ?>

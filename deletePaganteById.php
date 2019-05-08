@@ -1,7 +1,7 @@
 <?php
 
-
   if ($_POST["id"]){
+
     $servername = "localhost";
     $username = "root";
     $password = "taichow";
@@ -15,9 +15,6 @@
       echo ("Connection failed: " . $conn->connect_error);
       return;
     }
-    else {
-      // var_dump("ok"); die();
-    }
 
     $id = $_POST["id"];
 
@@ -26,14 +23,11 @@
             FROM paganti
             WHERE id = $id
           ";
-    // echo $sql; die();
 
     $result = $conn->query($sql);
-    // var_dump($result); die();
-
     $conn->close();
 
-    
+
 
   }
 
