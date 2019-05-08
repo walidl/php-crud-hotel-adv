@@ -1,0 +1,80 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+h1{
+
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.container{
+
+  width: 90%;
+  margin: auto;
+}
+
+.options{
+
+  margin-bottom: 10px;
+}
+
+.tabella .rows > div{
+
+
+  display: flex;
+  padding: 5px 0;
+  border-top : 1px solid #ccc;
+}
+
+.tabella .titles {
+
+  display: flex;
+  padding: 5px 0;
+  font-weight: bold;
+
+}
+
+.tabella .name , .tabella .lastname {
+
+  width: 150px;
+  height: 100%;
+  padding-left: 5px;
+}
+
+.tabella input{
+
+  height: 100%;
+  width: 100%;
+  padding:3px;
+}
+
+.tabella input:read-only{
+  padding: 0px;
+  background: none;
+  border: none;
+}
+
+.tabella .row{
+
+  position: relative;
+}
+
+.tabella .row .modifiche{
+
+
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+}
+
+.tabella .row .modifiche > *{
+
+  margin: 0 5px
+}
